@@ -105,19 +105,12 @@ WHERE release_date > DATE '2020-01-01';
 
 🔥 Technologies Used
 Python 3.8+
-
 Spotipy Library
-
 AWS Lambda
-
 Amazon S3
-
 AWS Glue
-
 Amazon Athena
-
 AWS EventBridge
-
 IAM Roles
 
 📷 Snapshots
@@ -132,12 +125,8 @@ AWS Documentation and Services
 Project inspired by real-world Data Engineering practices
 
 📚 References
-Spotify API Documentation
-
-AWS Lambda
-
-AWS S3
-
-AWS Glue
-
-Amazon Athena
+Spotify API Documentation : https://developer.spotify.com/documentation/web-api/
+AWS Lambda : https://docs.aws.amazon.com/lambda/
+AWS S3 : https://docs.aws.amazon.com/s3/
+AWS Glue : https://docs.aws.amazon.com/glue/
+Amazon Athena : https://docs.aws.amazon.com/athena/
