@@ -125,8 +125,8 @@ AWS Documentation and Services
 Project inspired by real-world Data Engineering practices
 
 📚 References
-Spotify API Documentation : https://developer.spotify.com/documentation/web-api/
-AWS Lambda : https://docs.aws.amazon.com/lambda/
-AWS S3 : https://docs.aws.amazon.com/s3/
-AWS Glue : https://docs.aws.amazon.com/glue/
-Amazon Athena : https://docs.aws.amazon.com/athena/
+[Spotify API Documentation](https://developer.spotify.com/documentation/web-api/)
+[AWS Lambda](https://docs.aws.amazon.com/lambda/)
+[AWS S3](https://docs.aws.amazon.com/s3/)
+[AWS Glue](https://docs.aws.amazon.com/glue/)
+[Amazon Athena](https://docs.aws.amazon.com/athena/)
