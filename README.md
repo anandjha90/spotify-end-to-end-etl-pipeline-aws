@@ -56,3 +56,88 @@ The project extracts Spotify's **Top 50** playlist data, processes it through tr
 ---
 
 ## 📂 S3 Bucket Structure
+---
+
+## ⚙️ Steps to Reproduce
+
+1. **Spotify Setup**
+   - Create a Developer App at [Spotify Developer Dashboard](https://developer.spotify.com/dashboard).
+   - Retrieve **Client ID** and **Client Secret**.
+   
+2. **AWS Setup**
+   - Create an S3 bucket (e.g., `spotify-etl-project`).
+   - Create two Lambda functions:
+     - `spotify_api_data_extract`
+     - `spotify_transformation_load_function`
+   - Attach required IAM roles to Lambda functions for S3 and CloudWatch access.
+   
+3. **Lambda Layers**
+   - Add required libraries (`spotipy`, `pandas`, `boto3`) to Lambda using layers.
+
+4. **Automation**
+   - Use EventBridge to schedule the data extraction Lambda daily.
+   - Set up an S3 Event Trigger for the transformation Lambda whenever a new file arrives.
+
+5. **Glue & Athena**
+   - Create a Glue Database (`spotify_db`).
+   - Create Crawlers for songs, albums, and artists folders.
+   - Run queries in Athena after crawler updates.
+
+---
+## 📊 Example Athena Queries
+
+```sql
+-- Top 10 Popular Songs
+SELECT song_name, popularity
+FROM songs_data
+ORDER BY popularity DESC
+LIMIT 10;
+
+-- Count of Albums per Artist
+SELECT artist_id, COUNT(DISTINCT album_id) AS album_count
+FROM songs_data
+GROUP BY artist_id;
+
+-- Albums Released After 2020
+SELECT name, release_date
+FROM album_data
+WHERE release_date > DATE '2020-01-01';
+
+🔥 Technologies Used
+Python 3.8+
+
+Spotipy Library
+
+AWS Lambda
+
+Amazon S3
+
+AWS Glue
+
+Amazon Athena
+
+AWS EventBridge
+
+IAM Roles
+
+📷 Snapshots
+Spotify API Interaction
+
+
+🙌 Credits
+Spotify Developer Team
+
+AWS Documentation and Services
+
+Project inspired by real-world Data Engineering practices
+
+📚 References
+Spotify API Documentation
+
+AWS Lambda
+
+AWS S3
+
+AWS Glue
+
+Amazon Athena
